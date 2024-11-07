@@ -11,8 +11,8 @@ Version: 2.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #00813D;
-  --theme2: #D12525;
+  --theme: #ee1b22;
+  --theme2: #ee1b22;
   --theme3: #FFB936;
   --header: #212121;
   --base: #00813D;
@@ -4478,6 +4478,21 @@ input.main-search-input::placeholder {
   .fooder-menu-wrapper {
     padding: 15px 30px 40px;
   }
+  .fooder-menu-wrapper .food-menu-items {
+    /* padding: 25px 25px 30px; */
+    margin-top: 30px;
+    border-bottom: 1px dotted var(--text);
+    transition: all 0.4s ease-in-out;
+    position: relative;
+}
+.fooder-menu-wrapper .food-menu-items:hover {
+  /* background-color: #ec3339; */
+
+}
+.fooder-menu-wrapper .food-menu-items{
+  width: 300px;
+  margin-left: -100px;
+}
 }
 .fooder-menu-wrapper .food-menu-items {
   padding: 25px 25px 30px;
@@ -4488,7 +4503,7 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 575px) {
   .fooder-menu-wrapper .food-menu-items {
-    background-color: var(--theme);
+    /* background-color: var(--theme); */
     border-radius: 8px;
     gap: 20px;
     flex-wrap: wrap;
@@ -4531,7 +4546,8 @@ input.main-search-input::placeholder {
   z-index: 9;
 }
 .fooder-menu-wrapper .food-menu-items:hover {
-  background-color: var(--theme);
+  background-color: #ec3339;
+  /* var(--theme); */
   border-radius: 8px;
 }
 .fooder-menu-wrapper .food-menu-items:hover::before {
@@ -4558,7 +4574,7 @@ input.main-search-input::placeholder {
   color: var(--white);
 }
 .fooder-menu-wrapper .food-menu-items.active {
-  background-color: var(--theme);
+  /* background-color: var(--theme); */
   border-radius: 8px;
 }
 .fooder-menu-wrapper .food-menu-items.active::before {
@@ -4573,7 +4589,7 @@ input.main-search-input::placeholder {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../../assets/img/shape/overlay-shape.png);
+  /* background-image: url(../../assets/img/shape/overlay-shape.png); */
   transition: all 0.3s ease-in-out;
 }
 .fooder-menu-wrapper .food-menu-items.active .food-menu-content h4, .fooder-menu-wrapper .food-menu-items.active .food-menu-content p {
