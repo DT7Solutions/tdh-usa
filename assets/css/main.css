@@ -12107,3 +12107,20 @@ p.sticky-label {
 .content-panel.active {
   display: block;
 }
+
+.food-menu-items .img1 {
+  display: block;
+}
+
+.food-menu-items .img2 {
+  display: none; 
+}
+
+.food-menu-items:hover .img1 {
+  display: none; 
+}
+
+.food-menu-items:hover .img2 {
+  display: block;
+  /* transition: opacity 3s ease, transform 1s ease */
+}
