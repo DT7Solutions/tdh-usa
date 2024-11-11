@@ -11945,7 +11945,7 @@ p.sticky-label {
 }
 
 .footer-bottom {
-  padding: 35px 0;
+  padding: 18px 0;
   background-color: var(--theme);
 }
 @media (max-width: 767px) {
@@ -11958,7 +11958,7 @@ p.sticky-label {
 .footer-bottom .footer-bottom-wrapper p {
   text-transform: capitalize;
   color: var(--white);
-  font-size: 20px;
+  font-size: 16px;
 }
 .footer-bottom .footer-bottom-wrapper p a {
   color: var(--white);
