@@ -937,7 +937,8 @@ input.main-search-input::placeholder {
   content: "";
   height: 100%;
   width: 500px;
-  background-color: var(--header);
+  background-color: #f4f1ea;
+  /* var(--header); */
 }
 @media (max-width: 1399px) {
   .header-top::before {
@@ -12203,4 +12204,9 @@ p.sticky-label {
   color:rgb(255, 255, 255);
   text-transform: capitalize;
   
+}
+
+/* 933 */
+.top-right .social-icon a i{
+  color: #0C0F26;
 }
