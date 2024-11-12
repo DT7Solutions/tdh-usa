@@ -434,6 +434,39 @@
            
         });
 
+         //>> Update Page 4 Start <<//
+         const testimonialSliderflags = new Swiper(".testimonial-slider-flags", {
+            spaceBetween: 40,
+            speed: 1000,
+            loop: true,  
+            slidesPerView: 5,  
+            centeredSlides: true,  
+            autoplay: {
+                delay: 1500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".dot",
+                clickable: true,
+            },
+            breakpoints: {
+
+                485: {
+                    slidesPerView: 1 ,
+                },
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 3, 
+                },
+                1200: {
+                    slidesPerView: 5,
+                }
+            }
+           
+        });
+
         //>> Food Catagory Slider Start <<//
         const gallerySlider = new Swiper(".gallery-slider", {
             spaceBetween: 30,
