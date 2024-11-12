@@ -12200,7 +12200,7 @@ p.sticky-label {
 
 }
 .catagory-product-card:hover .read-link a{
-  color:red;
+  color:rgb(255, 255, 255);
   text-transform: capitalize;
   
 }
