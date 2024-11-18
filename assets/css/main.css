@@ -12157,7 +12157,7 @@ p.sticky-label {
 }
 
 .country-name { 
-  visibility: visible;
+  visibility: hidden;
   text-align: center;
   font-size:12px;
   margin-top: -5px;
@@ -12167,6 +12167,7 @@ p.sticky-label {
 .swiper-slide-active .country-name {
   display: block; 
   margin-top: -55px;
+  visibility: visible;
 }
 
 @media (max-width: 576px) {
