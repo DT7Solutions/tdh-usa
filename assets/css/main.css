@@ -382,7 +382,7 @@ h1 {
 
 h2 {
   font-size: 50px;
-  line-height: 90%;
+  line-height: 110%;
   font-weight: 700;
 }
 @media (max-width: 1399px) {
@@ -655,7 +655,7 @@ input.main-search-input::placeholder {
 .section-title {
   position: relative;
   z-index: 99;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   margin-top: -6px;
 }
 @media (max-width: 767px) {
@@ -665,7 +665,7 @@ input.main-search-input::placeholder {
 }
 .section-title span {
   color: var(--theme2);
-  margin-bottom: 5px;
+  margin-bottom: 1%;
   display: inline-block;
   font-weight: 700;
   text-transform: uppercase;
@@ -974,7 +974,7 @@ input.main-search-input::placeholder {
   gap: 30px;
 }
 .header-top-wrapper ul li {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--header);
 }
@@ -1216,7 +1216,7 @@ input.main-search-input::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .header-main .main-menu ul {
   margin-bottom: 0;
@@ -1225,7 +1225,7 @@ input.main-search-input::placeholder {
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-inline-end: 30px;
+  margin-inline-end: 25px;
 }
 .header-main .main-menu ul li:last-child {
   margin-inline-end: 0;
@@ -1235,7 +1235,7 @@ input.main-search-input::placeholder {
   font-size: 14px;
   font-weight: 600;
   color: var(--header);
-  padding: 30px 0;
+  padding: 10px 0;
   text-align: left;
   position: relative;
   text-transform: uppercase;
@@ -1275,12 +1275,12 @@ input.main-search-input::placeholder {
 .header-main .main-menu ul li .submenu li a {
   position: relative;
   z-index: 11;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--header);
-  padding: 0 25px;
-  padding-bottom: 11px;
-  padding-top: 11px;
+  padding: 0 5%;
+  padding-bottom: 1%;
+  padding-top: 1%;
   width: 100%;
   border-bottom: 1px solid #eeeeee;
 }
@@ -1947,7 +1947,7 @@ input.main-search-input::placeholder {
 }
 
 .offcanvas__logo a img {
-  width: 150px;
+  max-width: 250px;
 }
 
 .offcanvas__wrapper {
@@ -1996,7 +1996,7 @@ input.main-search-input::placeholder {
   margin-top: 20px;
 }
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact ul li {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -2007,7 +2007,10 @@ input.main-search-input::placeholder {
   margin-right: 20px;
 }
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact ul li .offcanvas__contact-icon i {
-  color: var(--theme2);
+  color: var(--theme);
+}
+.offcanvas__wrapper .offcanvas__content .offcanvas__contact ul li .offcanvas__contact-text a {
+  font-size: 14px;
 }
 .offcanvas__wrapper .offcanvas__content .offcanvas__contact .header-button .theme-btn {
   width: 100%;
@@ -2421,6 +2424,9 @@ input.main-search-input::placeholder {
   transform: translateX(-50%);
 }
 
+.hero-content h1 {
+  font-size: 80px;
+}
 .hero-1 {
   position: relative;
   z-index: 1;
@@ -3373,6 +3379,15 @@ input.main-search-input::placeholder {
   }
 }
 
+.food-category-section .catagory-product-card {
+  background-image: url(../img/shape/catagory-card-shape.png);
+  padding: 0%;
+}
+.food-category-section .catagory-product-card:hover::before, 
+.food-category-section .catagory-product-card:hover::after {
+  opacity: 0.85;
+  visibility: visible;
+}
 .catagory-product-card {
   background-color: var(--white);
   padding: 20px 30px 15px;
@@ -3498,7 +3513,7 @@ input.main-search-input::placeholder {
   transition: all 0.3s ease-in-out;
 }
 .catagory-product-card .catagory-product-content p {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--theme2);
   text-transform: uppercase;
@@ -4084,6 +4099,9 @@ input.main-search-input::placeholder {
 .about-wrapper .about-content {
   margin-left: 20px;
 }
+.about-wrapper .about-content p {
+  text-align: justify;
+}
 @media (max-width: 1399px) {
   .about-wrapper .about-content {
     margin-left: 0;
@@ -4394,11 +4412,9 @@ input.main-search-input::placeholder {
 }
 
 .about-food-wrapper {
-  /* margin-bottom: -120px; */
   position: relative;
   z-index: 9;
-  /* background-color: #f3f3f3; */
-  padding: 100px 65px;
+  padding: 75px 50px;
 }
 .about-food-wrapper.style-2 {
   padding: 0;
@@ -4430,8 +4446,7 @@ input.main-search-input::placeholder {
   }
 }
 .about-food-wrapper .nav {
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 2.5%;
 }
 @media (max-width: 767px) {
   .about-food-wrapper .nav {
@@ -4441,11 +4456,12 @@ input.main-search-input::placeholder {
 .about-food-wrapper .nav .nav-item .nav-link {
   border: 1px solid var(--border);
   border-radius: 40px;
-  padding: 12px 35px;
+  padding: 8px 25px;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   text-transform: uppercase;
   color: var(--header);
+  background-color: var(--white);
 }
 .about-food-wrapper .nav .nav-item .nav-link.active {
   background-color: var(--theme3);
@@ -4464,7 +4480,7 @@ input.main-search-input::placeholder {
   margin-top: 20px;
 }
 .about-food-wrapper .about-food-items .food-content h3 {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 .about-food-wrapper .about-food-items .food-content h3 a:hover {
@@ -4539,7 +4555,10 @@ input.main-search-input::placeholder {
   z-index: 9;
 }
 .fooder-menu-wrapper .food-menu-items .food-menu-content h4 {
-  margin-bottom: 5px;
+  margin-bottom: 2.5%;
+}
+.fooder-menu-wrapper .food-menu-items .food-menu-content p {
+  line-height: 1.1;
 }
 .fooder-menu-wrapper .food-menu-items .price {
   font-size: 24px;
@@ -12135,14 +12154,14 @@ p.sticky-label {
 .testimonial-slider-flags .swiper-slide {
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.5; 
-  transform: scale(0.5); 
+  transform: scale(0.75); 
   margin-top: 3%;
   margin-bottom: 10%;
 }
 
 .testimonial-slider-flags .swiper-slide-active {
   opacity: 1; 
-  transform: scale(2); 
+  transform: scale(1.75); 
 }
 
 .flag-img {
@@ -12194,7 +12213,9 @@ p.sticky-label {
 
 }
 .catagory-product-card:hover .read-link a{
-  color:rgb(255, 255, 255);
+  font-size: 14px;
+  padding: 2.5%;
+  color: var(--theme);
   text-transform: capitalize;
   
 }
@@ -12202,4 +12223,23 @@ p.sticky-label {
 /* 933 */
 .top-right .social-icon a i{
   color: #0C0F26;
+}
+
+.fooder-menu-section {
+  background-image: url(../img/bg-image/why-coose-us.png);
+  background-attachment: fixed;
+  position: relative; 
+  padding: 100px; 
+  background-size: cover; 
+  width: 100%;
+}
+.global-business {
+  background-image: url('../img/countery/Objects.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+.global-business .section-title p {
+  width: 70%; 
+  color: #050505;
 }
