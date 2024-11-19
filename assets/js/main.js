@@ -436,10 +436,10 @@
 
          //>> Update Page 4 Start <<//
          const testimonialSliderflags = new Swiper(".testimonial-slider-flags", {
-            spaceBetween: 40,
+            spaceBetween: 25,
             speed: 1000,
             loop: true,  
-            slidesPerView: 5,  
+            slidesPerView: 3,  
             centeredSlides: true,  
             autoplay: {
                 delay: 1500,
@@ -452,9 +452,6 @@
             breakpoints: {
 
                 485: {
-                    slidesPerView: 1 ,
-                },
-                0: {
                     slidesPerView: 1,
                 },
                 768: {
