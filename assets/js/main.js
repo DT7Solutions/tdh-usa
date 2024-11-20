@@ -445,9 +445,9 @@
                 delay: 1500,
                 disableOnInteraction: false,
             },
-            pagination: {
-                el: ".dot",
-                clickable: true,
+            navigation: {
+                nextEl: ".array-prev",
+                prevEl: ".array-next",
             },
             breakpoints: {
 
