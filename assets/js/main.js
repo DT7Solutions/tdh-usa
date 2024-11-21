@@ -439,7 +439,7 @@
             spaceBetween: 25,
             speed: 1000,
             loop: true,  
-            slidesPerView: 3,  
+            slidesPerView: 1,  
             centeredSlides: true,  
             autoplay: {
                 delay: 1500,

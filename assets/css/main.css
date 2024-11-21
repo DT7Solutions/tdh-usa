@@ -3380,6 +3380,8 @@ input.main-search-input::placeholder {
 }
 
 .food-category-section .catagory-product-card {
+  border: 1px solid #777373;
+  border-radius: 8px;
   background-image: url(../img/shape/catagory-card-shape.png);
   padding: 0% 2.5%;
 }
@@ -3393,7 +3395,6 @@ input.main-search-input::placeholder {
   visibility: visible;
 }
 .catagory-product-card {
-  background-color: var(--white);
   padding: 20px 30px 15px;
   position: relative;
   border-radius: 14px;
@@ -3529,10 +3530,6 @@ input.main-search-input::placeholder {
   margin: 0 auto;
   opacity: 1;
   visibility: visible;
-}
-.catagory-product-card,
-.catagory-product-card:hover {
-  border: 1px solid #000;
 }
 .catagory-product-card:hover::before {
   top: -25px;
@@ -5075,12 +5072,12 @@ input.main-search-input::placeholder {
   z-index: 99;
 }
 .array-button .array-prev {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 50%;
   background-color: var(--bg);
-  margin-right: 20px;
+  margin-right: 5px;
   border: 1px solid var(--theme);
   color: var(--theme2);
   transition: all 0.4s ease-in-out;
@@ -5096,22 +5093,22 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 575px) {
   .array-button .array-prev {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 .array-button .array-prev:hover {
   background-color: var(--white);
 }
 .array-button .array-next {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 100%;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.06);
   background-color: var(--bg);
-  margin-right: 20px;
+  margin-right: 5px;
   border: 1px solid var(--theme);
   color: var(--white);
   transition: all 0.4s ease-in-out;
@@ -5121,9 +5118,9 @@ input.main-search-input::placeholder {
 }
 @media (max-width: 575px) {
   .array-button .array-next {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 .array-button .array-next:hover {
@@ -5734,19 +5731,41 @@ input.main-search-input::placeholder {
   flex-direction: column;
   justify-content: center;
 }
-.choose-us-2 .section-title h2,
+.choose-us-2 .section-title h2 {
+  color: var(--body);
+}
 .choose-us-2 .section-title p {
   color: var(--body);
+  width: 70%;
 }
 
 .choose-us-2 .food-icon-wrapper-2 {
   background: #FAFAFA;
   position: relative;
-  left: 2.5%;
-  right: 2.5%;
-  border-radius: 35px;
+  border-radius: 20px;
   margin-top: -15%;
   padding: 2.5% 0%;
+}
+@media (max-width: 991px) { 
+  .choose-us-2 .section-title {
+    min-height: 350px;
+    justify-content: flex-start;
+  }
+  .choose-us-2 .food-icon-wrapper-2 {
+    margin-top: -40%;
+  }
+}
+@media (max-width: 575px) { 
+  .choose-us-2 .section-title {
+    min-height: 650px;
+    justify-content: flex-start;
+  }
+  .choose-us-2 .section-title p {
+    width: 100%;
+  }
+  .choose-us-2 .food-icon-wrapper-2 {
+    margin-top: -150%;
+  }
 }
 .choose-us-2 .food-icon-wrapper-2 .content .count {
   color: var(--theme) !important;
@@ -5771,8 +5790,11 @@ input.main-search-input::placeholder {
     margin-top: 10px;
   }
 }
+.choose-us-2 .food-icon-wrapper-2 .single-food-icon .content .count {
+  font-size: 55px;
+}
 .choose-us-2 .food-icon-wrapper-2 .single-food-icon .content h3 {
-  font-size: 27px;
+  font-size: 24px;
   text-transform: capitalize;
   color: var(--white);
   font-weight: 600;
@@ -11743,7 +11765,7 @@ p.sticky-label {
 
 .footer-section {
   position: relative;
-  background-image: url('../img/bg-image/footer-bg.png'); 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/bg-image/footer-bg.png'); 
   background-position: left center; 
   background-size: cover;
 }
@@ -11886,7 +11908,7 @@ p.sticky-label {
   text-transform: capitalize;
   position: relative;
   transition: all 0.4s ease-in-out;
-  color: var(--text);
+  color: var(--black);
   position: relative;
   overflow: hidden;
   display: block;
@@ -12250,14 +12272,14 @@ p.sticky-label {
 .testimonial-slider-flags .swiper-slide {
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.5; 
-  transform: scale(0.5); 
+  transform: scale(0.75); 
   margin-top: 3%;
   margin-bottom: 10%;
 }
 
 .testimonial-slider-flags .swiper-slide-active {
   opacity: 1; 
-  transform: scale(1.5); 
+  transform: scale(1.75); 
 }
 
 .flag-img {
@@ -12321,7 +12343,7 @@ p.sticky-label {
   background-image: url(../img/bg-image/why-coose-us.png);
   background-attachment: fixed;
   position: relative; 
-  padding: 100px; 
+  padding: 150px; 
   background-size: cover; 
   width: 100%;
 }
@@ -12335,16 +12357,33 @@ p.sticky-label {
 }
 .global-business {
   background-image: url('../img/countery/Objects.png');
-  height: 650px;
+  height: 675px;
   max-height: 100%;
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 991px) { 
+  .global-business {
+    height: 500px;
+  }
+}
+@media (max-width: 575px) { 
+  .global-business {
+    height: 600px;
+  }
+  .global-business .global-presence {
+    margin: 15% auto !important;
+  }
+  .testimonial-slider-flags .swiper-slide {
+    margin-bottom: 20%;
+  }
+}
 .global-business .global-presence {
-  margin: 7.5% 0%;
+  margin: 5% auto;
 }
 .global-business .section-title p {
   width: 70%;
+  margin: auto;
   font-size: 16px;
   color: #050505;
 }
@@ -12361,7 +12400,7 @@ p.sticky-label {
 
 
 .about-founder-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg-image/about-tdh-founder.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg-image/about-tdh-founder.png);
   position: relative;
   z-index: 1;
   background-position: bottom center;
@@ -12377,20 +12416,11 @@ p.sticky-label {
 .about-founder .founder-image {
   height: 370px;
   width: 300px;
-  margin-left: 100px;
+  border-radius: 8px;
+  margin-left: 10%;
   position: relative;
 }
 @media (max-width: 1199px) {
-  .about-founder .founder-image {
-    margin-left: 40px;
-  }
-}
-@media (max-width: 991px) {
-  .about-founder .founder-image {
-    margin-left: 0;
-  }
-}
-@media (max-width: 575px) {
   .about-founder .founder-image {
     text-align: center;
     margin: 0 auto;
