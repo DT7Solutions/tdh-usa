@@ -5721,7 +5721,38 @@ input.main-search-input::placeholder {
 }
 
 .choose-us-2 {
-  background-color: var(--theme2);
+  background: #F2ECE3;
+}
+.choose-bg {
+  background-image: url('../img/bg-image/mask-group.png');
+  background-attachment: fixed; 
+  position: relative; 
+}
+.choose-us-2 .section-title {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.choose-us-2 .section-title h2,
+.choose-us-2 .section-title p {
+  color: var(--body);
+}
+
+.choose-us-2 .food-icon-wrapper-2 {
+  background: #FAFAFA;
+  position: relative;
+  left: 2.5%;
+  right: 2.5%;
+  border-radius: 35px;
+  margin-top: -15%;
+  padding: 2.5% 0%;
+}
+.choose-us-2 .food-icon-wrapper-2 .content .count {
+  color: var(--theme) !important;
+}
+.choose-us-2 .food-icon-wrapper-2 .content h3{
+  color: var(--black) !important;
 }
 @media (max-width: 575px) {
   .choose-us-2 .food-icon-wrapper-2 {
