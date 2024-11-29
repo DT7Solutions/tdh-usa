@@ -11913,7 +11913,7 @@ p.sticky-label {
   text-align: center;
   font-size: 16px;
   display: block;
-  background: rgba(92, 92, 91, 0.1);
+  background: rgba(92, 92, 91, 0.5);
   color: var(--header);
   border-radius: 50%;
   -webkit-transition: all 0.4s ease-in-out;
@@ -11956,15 +11956,18 @@ p.sticky-label {
 }
 .footer-widgets-wrapper .single-footer-widget .footer-address-text h6 {
   font-weight: 400;
-  color: var(--text);
+  color: var(--black);
   line-height: 150%;
   font-size: 18px;
   text-transform: capitalize;
 }
 .footer-widgets-wrapper .single-footer-widget .list-items li a,
 .footer-widgets-wrapper .single-footer-widget .footer-content,
+.footer-widgets-wrapper .single-footer-widget .footer-content p,
 .footer-widgets-wrapper .single-footer-widget .footer-content .link {
   font-size: 16px;
+  font-weight: 500;
+  color: var(--black);
 }
 .footer-widgets-wrapper .single-footer-widget .footer-address-text h6 span {
   color: var(--theme2);
@@ -11975,7 +11978,7 @@ p.sticky-label {
 }
 .footer-widgets-wrapper .single-footer-widget .footer-apps-items h5 {
   font-weight: 400;
-  color: var(--text);
+  color: var(--black);
 }
 .footer-widgets-wrapper .single-footer-widget .footer-apps-items .apps-image {
   margin-top: 10px;
