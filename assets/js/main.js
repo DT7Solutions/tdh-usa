@@ -1020,3 +1020,66 @@
         });
     });
 });
+
+
+
+
+// Products Details Page Quanity and price Update
+document.addEventListener("DOMContentLoaded", function () {
+    const weights = {
+        "2 Lb": 215, // Weight in Lb and its price
+        "4 Lb": 400
+    };
+
+    const priceDisplay = document.getElementById("price");
+    const originalPriceDisplay = document.getElementById("original-price");
+    const quantityInput = document.getElementById("qty2");
+    const weightOptions = document.querySelectorAll(".nice-select .list .option");
+
+    let selectedWeight = "2 Lb"; // Default weight
+
+    // Function to update the total price
+    function updatePrice() {
+        const pricePerUnit = weights[selectedWeight];
+        const quantity = parseInt(quantityInput.value);
+        const totalPrice = pricePerUnit * quantity;
+
+        priceDisplay.textContent = `₹${totalPrice.toFixed(2)}`;
+        originalPriceDisplay.textContent = `₹${(totalPrice * 1.15).toFixed(2)}`; // Example: 15% higher original price
+    }
+
+    // Handle weight selection
+    weightOptions.forEach(option => {
+        option.addEventListener("click", function () {
+            selectedWeight = this.textContent.trim();
+            updatePrice();
+        });
+    });
+
+    // Handle quantity increase and decrease
+    document.querySelector(".qtyplus").addEventListener("click", () => {
+        let qty = parseInt(quantityInput.value);
+        if (qty < parseInt(quantityInput.max)) {
+            quantityInput.value = qty + 1;
+            updatePrice();
+        }
+    });
+
+    document.querySelector(".qtyminus").addEventListener("click", () => {
+        let qty = parseInt(quantityInput.value);
+        if (qty > parseInt(quantityInput.min)) {
+            quantityInput.value = qty - 1;
+            updatePrice();
+        }
+    });
+
+    // Handle quantity input change
+    quantityInput.addEventListener("input", () => {
+        if (quantityInput.value < quantityInput.min) quantityInput.value = quantityInput.min;
+        if (quantityInput.value > quantityInput.max) quantityInput.value = quantityInput.max;
+        updatePrice();
+    });
+
+    // Initialize price on load
+    updatePrice();
+});
