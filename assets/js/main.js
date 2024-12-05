@@ -1026,60 +1026,86 @@
 
 // Products Details Page Quanity and price Update
 document.addEventListener("DOMContentLoaded", function () {
-    const weights = {
-        "2 Lb": 215, // Weight in Lb and its price
-        "4 Lb": 400
-    };
+    // Function to initialize logic for each product form
+    function initializeProductForm(productForm) {
+        const priceDisplay = productForm.querySelector("#price");
+        const originalPriceDisplay = productForm.querySelector("#original-price");
+        const discountDisplay = productForm.querySelector(".star span");
+        const weightDropdown = productForm.querySelector(".nice-select");
+        const weightOptions = weightDropdown.querySelectorAll(".list .option");
+        const qtyInput = productForm.querySelector("#qty2");
+        const qtyMinusButton = productForm.querySelector(".qtyminus");
+        const qtyPlusButton = productForm.querySelector(".qtyplus");
 
-    const priceDisplay = document.getElementById("price");
-    const originalPriceDisplay = document.getElementById("original-price");
-    const quantityInput = document.getElementById("qty2");
-    const weightOptions = document.querySelectorAll(".nice-select .list .option");
+        // Retrieve price and discount for a selected weight
+        function getSelectedWeightData() {
+            const selectedOptionText = weightDropdown.querySelector(".current").textContent.trim();
+            const selectedOption = Array.from(weightOptions).find(option => option.textContent.trim() === selectedOptionText);
 
-    let selectedWeight = "2 Lb"; // Default weight
+            if (!selectedOption) return { price: 0, discount: 0 };
+            
+            // Read price and discount data from attributes
+            const price = parseFloat(selectedOption.dataset.price || 0);
+            const discount = parseFloat(selectedOption.dataset.discount || 0);
+            return { price, discount };
+        }
 
-    // Function to update the total price
-    function updatePrice() {
-        const pricePerUnit = weights[selectedWeight];
-        const quantity = parseInt(quantityInput.value);
-        const totalPrice = pricePerUnit * quantity;
+        // Update displayed prices based on selected weight and quantity
+        function updatePrices() {
+            const { price, discount } = getSelectedWeightData();
+            const quantity = parseInt(qtyInput.value) || 1;
 
-        priceDisplay.textContent = `₹${totalPrice.toFixed(2)}`;
-        originalPriceDisplay.textContent = `₹${(totalPrice * 1.15).toFixed(2)}`; // Example: 15% higher original price
+            const discountedPrice = price * (1 - discount / 100);
+            const totalPrice = discountedPrice * quantity;
+            const originalTotalPrice = price * quantity;
+
+            // Update the UI
+            priceDisplay.textContent = `₹${totalPrice.toFixed(2)}`;
+            originalPriceDisplay.textContent = `₹${originalTotalPrice.toFixed(2)}`;
+            discountDisplay.textContent = `${discount}% Discount`;
+        }
+
+        // Handle weight selection changes
+        weightOptions.forEach(option => {
+            option.addEventListener("click", function () {
+                weightDropdown.querySelector(".current").textContent = this.textContent;
+                updatePrices();
+            });
+        });
+
+        // Handle quantity changes
+        qtyInput.addEventListener("input", function () {
+            let value = parseInt(this.value);
+            if (isNaN(value) || value < 1) value = 1;
+            if (value > 10) value = 10;
+            this.value = value; // Enforce valid range
+            updatePrices();
+        });
+
+        // Handle decrement button
+        qtyMinusButton.addEventListener("click", function () {
+            let quantity = parseInt(qtyInput.value) || 1;
+            if (quantity > 1) {
+                qtyInput.value = --quantity;
+                updatePrices();
+            }
+        });
+
+        // Handle increment button
+        qtyPlusButton.addEventListener("click", function () {
+            let quantity = parseInt(qtyInput.value) || 1;
+            if (quantity < 10) {
+                qtyInput.value = ++quantity;
+                updatePrices();
+            }
+        });
+
+        // Initialize prices on page load
+        // updatePrices();
     }
 
-    // Handle weight selection
-    weightOptions.forEach(option => {
-        option.addEventListener("click", function () {
-            selectedWeight = this.textContent.trim();
-            updatePrice();
-        });
-    });
-
-    // Handle quantity increase and decrease
-    document.querySelector(".qtyplus").addEventListener("click", () => {
-        let qty = parseInt(quantityInput.value);
-        if (qty < parseInt(quantityInput.max)) {
-            quantityInput.value = qty + 1;
-            updatePrice();
-        }
-    });
-
-    document.querySelector(".qtyminus").addEventListener("click", () => {
-        let qty = parseInt(quantityInput.value);
-        if (qty > parseInt(quantityInput.min)) {
-            quantityInput.value = qty - 1;
-            updatePrice();
-        }
-    });
-
-    // Handle quantity input change
-    quantityInput.addEventListener("input", () => {
-        if (quantityInput.value < quantityInput.min) quantityInput.value = quantityInput.min;
-        if (quantityInput.value > quantityInput.max) quantityInput.value = quantityInput.max;
-        updatePrice();
-    });
-
-    // Initialize price on load
-    updatePrice();
+    // Initialize logic for all product forms on the page
+    const productForms = document.querySelectorAll(".product-form-wrapper form");
+    productForms.forEach(initializeProductForm);
 });
+
