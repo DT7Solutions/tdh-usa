@@ -436,7 +436,7 @@
 
          //>> Update Page 4 Start <<//
          const testimonialSliderflags = new Swiper(".testimonial-slider-flags", {
-            spaceBetween: 25,
+            spaceBetween: 10,
             speed: 1000,
             loop: true,  
             slidesPerView: 1,  
@@ -458,7 +458,7 @@
                     slidesPerView: 3, 
                 },
                 1200: {
-                    slidesPerView: 5,
+                    slidesPerView: 6,
                 }
             }
            
