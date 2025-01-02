@@ -555,7 +555,7 @@
         const foodSlider = new Swiper(".food-slider", {
             spaceBetween: 30,
             loop: "true",
-            speed: 4000,
+            speed: 8000,
             autoplay: {
                 delay: 1500,
                 disableOnInteraction: false,

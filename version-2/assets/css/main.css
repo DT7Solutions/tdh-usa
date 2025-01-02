@@ -6008,8 +6008,13 @@ input.main-search-input::placeholder {
   margin: 7.5% 2.5%;
   min-height: 250px;
   max-width: 250px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: 1px solid var(--ratting);
+
+}
+.health-benefits .food-icon-wrapper-2 .single-food-icon:hover {
+  box-shadow: 0 0 20px rgba(179, 178, 178, 0.2);
+
 }
 .health-benefits .food-icon-wrapper-2 .single-food-icon .icon {
   font-size: 65px;
@@ -12803,7 +12808,7 @@ p.sticky-label {
   }
 }
 .global-business {
-  /* background-image: url('../img/countery/Objects.png'); */
+  background-image: url('../../../version-2/assets/img/background/GlobalPresence-bg-2.png');
   height: 600px;
   max-height: 100%;
   background-position: center;
