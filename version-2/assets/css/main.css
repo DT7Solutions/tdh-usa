@@ -4170,6 +4170,7 @@ input.main-search-input::placeholder {
 .about-content .section-title span {
   font-size: 16px;
   font-weight: 500;
+  
 }
 .about-content .section-title h2 {
   text-align: start;
@@ -4177,8 +4178,17 @@ input.main-search-input::placeholder {
 .about-content .section-title h2 span {
   font-size: 2.25rem;
 }
+.about-content .section-title h2 strong {
+  color: var(--theme);
+  display: inline-block;
+  line-height: 1;
+  text-transform: capitalize;
+}
 .about-wrapper .about-content {
   margin-left: 20px;
+}
+.about-wrapper .about-content .timeline .item {
+  margin: 2.5% 0%;
 }
 .about-wrapper .about-content p {
   text-align: justify;
@@ -12066,6 +12076,21 @@ p.sticky-label {
   }
 }
 
+.contact-section .contact-info-items {
+  display: flex;
+  padding: 7.5%;
+  align-items: center;
+  gap: 25px;
+}
+.contact-section .contact-info-items .icon img {
+  max-width: 40px;
+}
+.contact-section .contact-info-items .content,
+.contact-section .contact-info-items .content h3 {
+  margin: 0%;
+  text-transform: capitalize;
+}
+
 .footer-contact-us-wrapper {
   background-color: #212121;
   position: relative;
@@ -13174,3 +13199,7 @@ p.sticky-label {
   font-weight: 300;
   text-transform: capitalize;
 }
+
+
+
+
